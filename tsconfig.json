@@ -3,9 +3,17 @@
         "target": "es5",
         "module": "commonjs",
         "moduleResolution": "node",
+        "noImplicitAny": true,
         "emitDecoratorMetadata": true,
         "experimentalDecorators": true,
-        "noImplicitAny": true
+        "paths": {
+            "angular2/*": [
+                "jspm_packages/npm/angular2@2.0.0-beta.7/*"
+            ],
+            "rxjs/*": [
+                "jspm_packages/npm/rxjs@5.0.0-beta.2/*"
+            ]
+        }
     },
     "exclude": [
         "node_modules"

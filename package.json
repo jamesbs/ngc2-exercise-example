@@ -1,10 +1,10 @@
 {
-  "name": "jamesbs2",
+  "name": "flashcards",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "gulp start",
+    "start": "lite-server",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
@@ -20,21 +20,32 @@
   "devDependencies": {
     "del": "^2.2.0",
     "gulp": "^3.9.1",
+    "jasmine": "^2.4.1",
     "jspm": "^0.16.30",
+    "karma": "^0.13.22",
+    "karma-jasmine": "^0.3.7",
+    "lite-server": "^2.1.0",
     "merge-stream": "^1.0.0",
     "ramda": "^0.19.1",
     "systemjs": "^0.19.23",
     "tslint": "^3.5.0",
     "typescript": "^1.8.7",
-    "typings": "^0.7.5"
+    "typings": "^0.7.9"
   },
   "jspm": {
     "directories": {
-      "baseURL": "dist",
+      "baseURL": "./",
       "packages": "jspm_packages"
     },
     "configFile": "config.js",
-    "dependencies": {},
+    "dependencies": {
+      "angular2": "npm:angular2@^2.0.0-beta.9",
+      "es6-promise": "npm:es6-promise@^3.0.2",
+      "es6-shim": "npm:es6-shim@^0.33.3",
+      "reflect-metadata": "npm:reflect-metadata@^0.1.3",
+      "rxjs": "npm:rxjs@5.0.0-beta.2",
+      "zone.js": "npm:zone.js@^0.6.4"
+    },
     "devDependencies": {
       "typescript": "npm:typescript@^1.6.2"
     }
