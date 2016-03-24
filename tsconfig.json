@@ -8,7 +8,7 @@
         "experimentalDecorators": true,
         "paths": {
             "angular2/*": [
-                "jspm_packages/npm/angular2@2.0.0-beta.7/*"
+                "jspm_packages/npm/angular2@2.0.0-beta.9/*"
             ],
             "rxjs/*": [
                 "jspm_packages/npm/rxjs@5.0.0-beta.2/*"

@@ -33,11 +33,6 @@
     "typings": "^0.7.9"
   },
   "jspm": {
-    "directories": {
-      "baseURL": "./",
-      "packages": "jspm_packages"
-    },
-    "configFile": "config.js",
     "dependencies": {
       "angular2": "npm:angular2@^2.0.0-beta.9",
       "es6-promise": "npm:es6-promise@^3.0.2",

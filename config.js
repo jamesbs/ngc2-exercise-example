@@ -3,24 +3,25 @@ System.config({
   defaultJSExtensions: true,
   transpiler: "typescript",
   paths: {
-        "npm:*": "jspm_packages/npm/*",
-        "github:*": "jspm_packages/github/*"
+    "npm:*": "jspm_packages/npm/*",
+    "github:*": "jspm_packages/github/*"
   },
+
   packages: {
-      "app": {
-          "defaultExtension": "ts"
-        },
-        transpiler: "typescript",
+    "app": {
+      "defaultExtension": "ts"
+    },
+    "transpiler": "typescript"
   },
 
   map: {
-    "angular2": "npm:angular2@2.0.0-beta.9",
+    "angular2": "npm:angular2@2.0.0-beta.11",
     "es6-promise": "npm:es6-promise@3.1.2",
     "es6-shim": "npm:es6-shim@0.33.13",
     "reflect-metadata": "npm:reflect-metadata@0.1.3",
     "rxjs": "npm:rxjs@5.0.0-beta.2",
-    "typescript": "npm:typescript@1.8.7",
-    "zone.js": "npm:zone.js@0.6.4",
+    "typescript": "npm:typescript@1.8.9",
+    "zone.js": "npm:zone.js@0.6.6",
     "github:jspm/nodelibs-assert@0.1.0": {
       "assert": "npm:assert@1.3.0"
     },
@@ -54,14 +55,14 @@ System.config({
     "github:jspm/nodelibs-vm@0.1.0": {
       "vm-browserify": "npm:vm-browserify@0.0.4"
     },
-    "npm:angular2@2.0.0-beta.9": {
+    "npm:angular2@2.0.0-beta.11": {
       "crypto": "github:jspm/nodelibs-crypto@0.1.0",
       "es6-promise": "npm:es6-promise@3.1.2",
-      "es6-shim": "npm:es6-shim@0.33.13",
+      "es6-shim": "npm:es6-shim@0.35.0",
       "process": "github:jspm/nodelibs-process@0.1.2",
       "reflect-metadata": "npm:reflect-metadata@0.1.2",
       "rxjs": "npm:rxjs@5.0.0-beta.2",
-      "zone.js": "npm:zone.js@0.5.15"
+      "zone.js": "npm:zone.js@0.6.6"
     },
     "npm:asn1.js@4.5.2": {
       "assert": "github:jspm/nodelibs-assert@0.1.0",
@@ -206,6 +207,9 @@ System.config({
     "npm:es6-shim@0.33.13": {
       "process": "github:jspm/nodelibs-process@0.1.2"
     },
+    "npm:es6-shim@0.35.0": {
+      "process": "github:jspm/nodelibs-process@0.1.2"
+    },
     "npm:evp_bytestokey@1.0.0": {
       "buffer": "github:jspm/nodelibs-buffer@0.1.0",
       "create-hash": "npm:create-hash@1.1.2",
@@ -309,11 +313,7 @@ System.config({
     "npm:vm-browserify@0.0.4": {
       "indexof": "npm:indexof@0.0.1"
     },
-    "npm:zone.js@0.5.15": {
-      "es6-promise": "npm:es6-promise@3.1.2",
-      "process": "github:jspm/nodelibs-process@0.1.2"
-    },
-    "npm:zone.js@0.6.4": {
+    "npm:zone.js@0.6.6": {
       "process": "github:jspm/nodelibs-process@0.1.2"
     }
   }
