@@ -6,8 +6,8 @@ import { bootstrap } from 'angular2/platform/browser';
 import { Flashcard } from './flashcard/flashcard';
 import { HTTP_PROVIDERS, Http } from 'angular2/http';
 import { CharacterService } from './provider/character';
-import { RxTest } from './temp/rxt';
 
+import { RxTest } from './temp/rxt';
 @Component({
     selector: 'app',
     directives: [ Flashcard, RxTest ],

@@ -1,27 +1,34 @@
 System.config({
   baseURL: "/",
   defaultJSExtensions: true,
-  transpiler: "typescript",
+  transpiler: "ts",
   paths: {
     "npm:*": "jspm_packages/npm/*",
     "github:*": "jspm_packages/github/*"
   },
-
-  packages: {
-    "app": {
-      "defaultExtension": "ts"
-    },
-    "transpiler": "typescript"
+  
+  typescriptOptions: {
+    "target": "es5",
+    "module": "system",
+    "noImplicitAny": false,
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true
   },
-
+  
   map: {
-    "angular2": "npm:angular2@2.0.0-beta.11",
+    "ts": "jspm_packages/github/frankwallis/plugin-typescript@4.0.2/plugin.js",
+    "typescript": "jspm_packages/npm/typescript@1.8.9/lib/typescript.js",
+    "angular2": "npm:angular2@2.0.0-beta.12",
     "es6-promise": "npm:es6-promise@3.1.2",
     "es6-shim": "npm:es6-shim@0.33.13",
+    "path": "github:jspm/nodelibs-path@0.1.0",
+    "plugin-typescript": "github:frankwallis/plugin-typescript@4.0.2",
     "reflect-metadata": "npm:reflect-metadata@0.1.3",
     "rxjs": "npm:rxjs@5.0.0-beta.2",
-    "typescript": "npm:typescript@1.8.9",
     "zone.js": "npm:zone.js@0.6.6",
+    "github:frankwallis/plugin-typescript@4.0.2": {
+      "typescript": "npm:typescript@1.8.9"
+    },
     "github:jspm/nodelibs-assert@0.1.0": {
       "assert": "npm:assert@1.3.0"
     },
@@ -55,9 +62,8 @@ System.config({
     "github:jspm/nodelibs-vm@0.1.0": {
       "vm-browserify": "npm:vm-browserify@0.0.4"
     },
-    "npm:angular2@2.0.0-beta.11": {
+    "npm:angular2@2.0.0-beta.12": {
       "crypto": "github:jspm/nodelibs-crypto@0.1.0",
-      "es6-promise": "npm:es6-promise@3.1.2",
       "es6-shim": "npm:es6-shim@0.35.0",
       "process": "github:jspm/nodelibs-process@0.1.2",
       "reflect-metadata": "npm:reflect-metadata@0.1.2",
