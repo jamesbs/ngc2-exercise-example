@@ -7,6 +7,12 @@ System.config({
     "github:*": "jspm_packages/github/*"
   },
   
+  packages: {
+    "app": {
+      "defaultExtension": "ts"
+    }
+  },
+  
   typescriptOptions: {
     "target": "es5",
     "module": "system",
