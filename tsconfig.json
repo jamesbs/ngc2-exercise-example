@@ -1,21 +1,15 @@
 {
     "compilerOptions": {
         "target": "es5",
-        "module": "commonjs",
+        "module": "system",
         "moduleResolution": "node",
-        "noImplicitAny": true,
+        "noImplicitAny": false,
         "emitDecoratorMetadata": true,
-        "experimentalDecorators": true,
-        "paths": {
-            "angular2/*": [
-                "jspm_packages/npm/angular2@2.0.0-beta.7/*"
-            ],
-            "rxjs/*": [
-                "jspm_packages/npm/rxjs@5.0.0-beta.2/*"
-            ]
-        }
+        "experimentalDecorators": true
     },
     "exclude": [
-        "node_modules"
+        "node_modules",
+        "jspm_packages",
+        "typings"
     ]
 }

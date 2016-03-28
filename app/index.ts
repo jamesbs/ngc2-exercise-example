@@ -1,7 +1,11 @@
+import 'zone.js/dist/zone';
+import 'zone.js/dist/long-stack-trace-zone';
 import 'reflect-metadata';
-import { Component } from 'angular2/core';
+import { Component, provide } from 'angular2/core';
 import { bootstrap } from 'angular2/platform/browser';
 import { Flashcard } from './flashcard/flashcard';
+import { HTTP_PROVIDERS, Http } from 'angular2/http';
+import { CharacterService } from './provider/character';
 
 @Component({
     selector: 'app',
@@ -12,6 +16,10 @@ import { Flashcard } from './flashcard/flashcard';
     `  
 })
 export default class App {
+    private myCount: number = 20;
 }
 
-bootstrap(App);
+bootstrap(App, [
+    HTTP_PROVIDERS,
+    CharacterService
+]);
