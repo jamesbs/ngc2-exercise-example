@@ -1,4 +1,5 @@
 import { Component } from 'angular2/core';
+import { Control, FORM_DIRECTIVES, FormBuilder } from 'angular2/common';
 import * as Rx from 'rxjs';
 
 
@@ -6,16 +7,29 @@ import * as Rx from 'rxjs';
     selector: 'rxt',
     template: `
         <p style="font-weight: bold">label: {{value}}</p>
+        <form [ngFormModel]="form">
+            <div>
+                <input type="text" ngControl="name" />
+            </div>
+        </form>
     `
 })
 export class RxTest {
     value: string;
-    constructor() {}
+    form: any;
+    fb: FormBuilder;
     
-    ngOnInit() {
-        const obs = new Rx.Observable((subscriber) => {
-            console.log('Im a subscriber');
-            console.log(subscriber);
+    constructor(fb: FormBuilder) {
+        this.form = fb.group({
+            email: new Control(''),
+            name: new Control('')
+        });
+        
+        this.form.find('name').valueChanges.subscribe((val) =>{
+            console.log('prop', val);
         })
+    }
+    
+    ngAfterViewInit() {
     }
 }
