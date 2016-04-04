@@ -1,7 +1,8 @@
 System.config({
   baseURL: "/",
   defaultJSExtensions: true,
-  transpiler: "ts",
+  transpiler: false,
+  
   paths: {
     "npm:*": "jspm_packages/npm/*",
     "github:*": "jspm_packages/github/*"
@@ -9,7 +10,10 @@ System.config({
   
   packages: {
     "app": {
-      "defaultExtension": "ts"
+      "defaultExtension": "ts",
+      "meta": {
+          "*.ts": { "loader": "ts" }
+      }
     }
   },
   
