@@ -20,7 +20,7 @@ export class Flashcard {
     
     constructor(private characterService: CharacterService) {
         this.character = {
-            name: "James"
+            name: "Flash"
         };
     }
     

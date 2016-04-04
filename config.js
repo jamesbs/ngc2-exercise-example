@@ -13,6 +13,12 @@ System.config({
     }
   },
   
+  meta: {
+    "angular2/*": {
+        deps: [ "zone.js", "reflect-metadata" ]
+    }    
+  },
+  
   typescriptOptions: {
     "target": "es5",
     "module": "system",
