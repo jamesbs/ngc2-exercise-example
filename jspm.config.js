@@ -42,7 +42,7 @@ SystemJS.config({
     "process": "github:jspm/nodelibs-process@0.2.0-alpha",
     "ts": "github:frankwallis/plugin-typescript@4.0.5",
     "typescript": "jspm_packages/npm/typescript@1.8.9%2Flib%2Ftypescript.js",
-    "angular2": "npm:angular2@2.0.0-beta.13",
+    "angular2": "npm:angular2@2.0.0-beta.14",
     "es6-promise": "npm:es6-promise@3.1.2",
     "es6-shim": "npm:es6-shim@0.33.13",
     "path": "github:jspm/nodelibs-path@0.2.0-alpha",

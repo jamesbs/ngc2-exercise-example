@@ -52,7 +52,7 @@
       "process": "github:jspm/nodelibs-process@^0.2.0-alpha"
     },
     "overrides": {
-      "npm:angular2@2.0.0-beta.13": {
+      "npm:angular2@2.0.0-beta.14": {
         "main": false,
         "dependencies": {
           "reflect-metadata": "npm:reflect-metadata@0.1.2",
