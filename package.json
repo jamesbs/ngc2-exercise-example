@@ -21,7 +21,7 @@
     "del": "^2.2.0",
     "gulp": "^3.9.1",
     "jasmine": "^2.4.1",
-    "jspm": "^0.17.0-beta.12",
+    "jspm": "^0.17.0-beta.13",
     "karma": "^0.13.22",
     "karma-jasmine": "^0.3.7",
     "lite-server": "^2.1.0",
@@ -44,15 +44,18 @@
       "zone.js": "npm:zone.js@^0.6.4"
     },
     "devDependencies": {
+      "buffer": "github:jspm/nodelibs-buffer@^0.2.0-alpha",
+      "fs": "github:jspm/nodelibs-fs@^0.2.0-alpha",
+      "path": "github:jspm/nodelibs-path@^0.2.0-alpha",
+      "process": "github:jspm/nodelibs-process@^0.2.0-alpha",
+      "readline": "github:jspm/nodelibs-readline@^0.2.0-alpha",
       "typescript": "npm:typescript@^1.8.9"
     },
     "peerDependencies": {
-      "os": "github:jspm/nodelibs-os@^0.2.0-alpha",
-      "path": "github:jspm/nodelibs-path@^0.2.0-alpha",
-      "process": "github:jspm/nodelibs-process@^0.2.0-alpha"
+      "os": "github:jspm/nodelibs-os@^0.2.0-alpha"
     },
     "overrides": {
-      "npm:angular2@2.0.0-beta.14": {
+      "npm:angular2@2.0.0-beta.15": {
         "main": false,
         "dependencies": {
           "reflect-metadata": "npm:reflect-metadata@0.1.2",
@@ -80,17 +83,6 @@
       "npm:reflect-metadata@0.1.2": {
         "map": {
           "crypto": "@empty"
-        }
-      },
-      "npm:typescript@1.8.9": {
-        "browser": {},
-        "map": {
-          "buffer": "@empty",
-          "child_process": "@empty",
-          "fs": "@empty",
-          "path": "@empty",
-          "process": "@empty",
-          "readline": "@empty"
         }
       }
     }
