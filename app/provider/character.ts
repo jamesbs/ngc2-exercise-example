@@ -1,6 +1,6 @@
-import { Injectable } from 'angular2/core';
-import { Http } from 'angular2/http';
-import * as path from 'path';
+import { Injectable } from '@angular/core';
+import { Http } from '@angular/http';
+import 'rxjs/add/operator/map';
 
 @Injectable()
 export class CharacterService {
@@ -10,7 +10,7 @@ export class CharacterService {
     }
     
     getCharacter(id: number) {
-        return this.http.get(path.resolve(CharacterService.base, "people", id))
+        return this.http.get([CharacterService.base, "people", id].join('/'))
             .map(response => response.json());
     }
 }
