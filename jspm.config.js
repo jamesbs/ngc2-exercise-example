@@ -43,10 +43,10 @@ SystemJS.config({
     "module": "commonjs",
     "noImplicitAny": false,
     "emitDecoratorMetadata": true,
-    "experimentalDecorators": true,
+    "experimentalDecorators": true
   },
   map: {
-
+    "@angular/http": "npm:@angular/http@2.0.0-rc.3"
   }
 });
 
@@ -57,12 +57,12 @@ SystemJS.config({
     "github:*/*.json"
   ],
   map: {
-    "@angular/http": "npm:@angular/http@2.0.0-rc.3",
     "@angular/platform-browser-dynamic": "npm:@angular/platform-browser-dynamic@2.0.0-rc.3",
     "@angular/common": "npm:@angular/common@2.0.0-rc.3",
     "@angular/compiler": "npm:@angular/compiler@2.0.0-rc.3",
     "@angular/core": "npm:@angular/core@2.0.0-rc.3",
     "@angular/platform-browser": "npm:@angular/platform-browser@2.0.0-rc.3",
+    "@angular/router@3.0.0-alpha.8": "npm:@angular/router@3.0.0-alpha.8",
     "angular-common": "npm:@angular/common@2.0.0-rc.3",
     "angular-compiler": "npm:@angular/compiler@2.0.0-rc.3",
     "angular-core": "npm:@angular/core@2.0.0-rc.3",
