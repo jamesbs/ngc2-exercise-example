@@ -1,5 +1,9 @@
 {
-  "name": "angular2-starter",
+  "name": "ngc2-exercise-example",
   "dependencies": {},
-  "devDependencies": {}
+  "devDependencies": {},
+  "globalDependencies": {
+    "es2015": "registry:env/es2015#1.0.0+20160526151700",
+    "node": "registry:dt/node#6.0.0+20160621231320"
+  }
 }

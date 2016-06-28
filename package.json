@@ -1,30 +1,33 @@
 {
-  "name": "angular2-starter",
+  "name": "ngc2-exercise-example",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
   "scripts": {
     "start": "lite-server",
+    "dev": "npm start",
+    "prepresetup": "npm install",
+    "presetup": "jspm install",
+    "setup": "typings install",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {},
   "devDependencies": {
-    "@angular/common": "^2.0.0-rc.1",
-    "@angular/compiler": "^2.0.0-rc.1",
-    "@angular/core": "^2.0.0-rc.1",
-    "@angular/http": "^2.0.0-rc.1",
-    "@angular/platform-browser": "^2.0.0-rc.1",
-    "@angular/platform-browser-dynamic": "^2.0.0-rc.1",
-    "@angular/router": "^2.0.0-rc.1",
-    "@angular/testing": "0.0.0-0",
+    "@angular/common": "^2.0.0-rc.3",
+    "@angular/compiler": "^2.0.0-rc.3",
+    "@angular/core": "^2.0.0-rc.3",
+    "@angular/http": "^2.0.0-rc.3",
+    "@angular/platform-browser": "^2.0.0-rc.3",
+    "@angular/platform-browser-dynamic": "^2.0.0-rc.3",
+    "@angular/router": "^3.0.0-alpha.8",
     "del": "^2.2.0",
     "es6-promise": "^3.2.1",
     "es6-shim": "^0.35.1",
     "gulp": "^3.9.1",
     "jasmine": "^2.4.1",
-    "jspm": "^0.17.0-beta.13",
+    "jspm": "^0.17.0-beta.22",
     "karma": "^0.13.22",
     "karma-jasmine": "^0.3.7",
     "lite-server": "^2.1.0",
@@ -51,27 +54,28 @@
       "plugin-typescript": "github:frankwallis/plugin-typescript@^4.0.2",
       "reflect-metadata": "npm:reflect-metadata@0.1.2",
       "router": "npm:@angular/router@^2.0.0-rc.1",
-      "rxjs": "npm:rxjs@5.0.0-beta.6",
-      "ts": "github:frankwallis/plugin-typescript@^4.0.5",
-      "zone.js": "npm:zone.js@^0.6.4"
+      "ts": "github:frankwallis/plugin-typescript@^4.0.5"
     },
     "devDependencies": {
       "buffer": "github:jspm/nodelibs-buffer@^0.2.0-alpha",
       "fs": "github:jspm/nodelibs-fs@^0.2.0-alpha",
       "path": "github:jspm/nodelibs-path@^0.2.0-alpha",
-      "process": "github:jspm/nodelibs-process@^0.2.0-alpha",
       "readline": "github:jspm/nodelibs-readline@^0.2.0-alpha",
       "typescript": "npm:typescript@^1.8.9"
     },
     "peerDependencies": {
-      "@angular/common": "npm:@angular/common@2.0.0-rc.1",
-      "@angular/compiler": "npm:@angular/compiler@2.0.0-rc.1",
-      "@angular/core": "npm:@angular/core@2.0.0-rc.1",
-      "@angular/platform-browser": "npm:@angular/platform-browser@2.0.0-rc.1",
-      "os": "github:jspm/nodelibs-os@^0.2.0-alpha"
+      "@angular/common": "npm:@angular/common@2.0.0-rc.3",
+      "@angular/compiler": "npm:@angular/compiler@2.0.0-rc.3",
+      "@angular/core": "npm:@angular/core@2.0.0-rc.3",
+      "@angular/platform-browser": "npm:@angular/platform-browser@2.0.0-rc.3",
+      "assert": "github:jspm/nodelibs-assert@^0.2.0-alpha",
+      "os": "github:jspm/nodelibs-os@^0.2.0-alpha",
+      "process": "github:jspm/nodelibs-process@^0.2.0-alpha",
+      "rxjs": "npm:rxjs@5.0.0-beta.6",
+      "zone.js": "npm:zone.js@^0.6.6"
     },
     "overrides": {
-      "npm:@angular/common@2.0.0-rc.1": {
+      "npm:@angular/common@2.0.0-rc.3": {
         "meta": {
           "src/*.js": {
             "deps": [
@@ -81,7 +85,7 @@
           }
         }
       },
-      "npm:@angular/compiler@2.0.0-rc.1": {
+      "npm:@angular/compiler@2.0.0-rc.3": {
         "meta": {
           "src/*.js": {
             "deps": [
@@ -91,7 +95,7 @@
           }
         }
       },
-      "npm:@angular/core@2.0.0-rc.1": {
+      "npm:@angular/core@2.0.0-rc.3": {
         "meta": {
           "src/*.js": {
             "deps": [
@@ -111,6 +115,16 @@
           }
         }
       },
+      "npm:@angular/http@2.0.0-rc.3": {
+        "meta": {
+          "src/*.js": {
+            "deps": [
+              "reflect-metadata",
+              "zone.js"
+            ]
+          }
+        }
+      },
       "npm:@angular/platform-browser-dynamic@2.0.0-rc.1": {
         "meta": {
           "src/*.js": {
@@ -121,7 +135,17 @@
           }
         }
       },
-      "npm:@angular/platform-browser@2.0.0-rc.1": {
+      "npm:@angular/platform-browser-dynamic@2.0.0-rc.3": {
+        "meta": {
+          "src/*.js": {
+            "deps": [
+              "reflect-metadata",
+              "zone.js"
+            ]
+          }
+        }
+      },
+      "npm:@angular/platform-browser@2.0.0-rc.3": {
         "meta": {
           "src/*.js": {
             "deps": [
@@ -132,6 +156,16 @@
         }
       },
       "npm:@angular/router@2.0.0-rc.1": {
+        "meta": {
+          "src/*.js": {
+            "deps": [
+              "reflect-metadata",
+              "zone.js"
+            ]
+          }
+        }
+      },
+      "npm:@angular/router@2.0.0-rc.2": {
         "meta": {
           "src/*.js": {
             "deps": [

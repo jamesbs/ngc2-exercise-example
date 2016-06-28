@@ -1,10 +1,34 @@
 SystemJS.config({
+  nodeConfig: {
+    "paths": {
+      "ngc2-exercise-example/": "src/"
+    }
+  },
+  devConfig: {
+    "map": {
+      "buffer": "github:jspm/nodelibs-buffer@0.2.0-alpha",
+      "fs": "github:jspm/nodelibs-fs@0.2.0-alpha",
+      "readline": "github:jspm/nodelibs-readline@0.2.0-alpha",
+      "typescript": "npm:typescript@1.8.10",
+      "path": "github:jspm/nodelibs-path@0.2.0-alpha"
+    },
+    "packages": {
+      "github:jspm/nodelibs-buffer@0.2.0-alpha": {
+        "map": {
+          "buffer-browserify": "npm:buffer@4.7.0"
+        }
+      },
+      "npm:buffer@4.7.0": {
+        "map": {
+          "ieee754": "npm:ieee754@1.1.6",
+          "base64-js": "npm:base64-js@1.1.2",
+          "isarray": "npm:isarray@1.0.0"
+        }
+      }
+    }
+  },
   transpiler: false,
   packages: {
-    "angular2-starter": {
-      "format": "esm",
-      "main": "angular2-starter.js"
-    },
     "app": {
       "defaultExtension": "ts",
       "meta": {
@@ -14,20 +38,15 @@ SystemJS.config({
       }
     }
   },
-  meta: {
-    "angular2/*": {
-      "deps": [
-        "zone.js",
-        "reflect-metadata"
-      ]
-    }
-  },
   typescriptOptions: {
     "target": "es5",
-    "module": "system",
+    "module": "commonjs",
     "noImplicitAny": false,
     "emitDecoratorMetadata": true,
-    "experimentalDecorators": true
+    "experimentalDecorators": true,
+  },
+  map: {
+
   }
 });
 
@@ -38,53 +57,35 @@ SystemJS.config({
     "github:*/*.json"
   ],
   map: {
-    "@angular/common": "npm:@angular/common@2.0.0-rc.1",
-    "@angular/compiler": "npm:@angular/compiler@2.0.0-rc.1",
-    "@angular/core": "npm:@angular/core@2.0.0-rc.1",
-    "@angular/http": "npm:@angular/http@2.0.0-rc.1",
-    "@angular/platform-browser": "npm:@angular/platform-browser@2.0.0-rc.1",
-    "@angular/platform-browser-dynamic": "npm:@angular/platform-browser-dynamic@2.0.0-rc.1",
-    "@angular/router": "npm:@angular/router@2.0.0-rc.1",
-    "buffer": "github:jspm/nodelibs-buffer@0.2.0-alpha",
-    "fs": "github:jspm/nodelibs-fs@0.2.0-alpha",
+    "@angular/http": "npm:@angular/http@2.0.0-rc.3",
+    "@angular/platform-browser-dynamic": "npm:@angular/platform-browser-dynamic@2.0.0-rc.3",
+    "@angular/common": "npm:@angular/common@2.0.0-rc.3",
+    "@angular/compiler": "npm:@angular/compiler@2.0.0-rc.3",
+    "@angular/core": "npm:@angular/core@2.0.0-rc.3",
+    "@angular/platform-browser": "npm:@angular/platform-browser@2.0.0-rc.3",
+    "angular-common": "npm:@angular/common@2.0.0-rc.3",
+    "angular-compiler": "npm:@angular/compiler@2.0.0-rc.3",
+    "angular-core": "npm:@angular/core@2.0.0-rc.3",
+    "angular-platform-browser": "npm:@angular/platform-browser@2.0.0-rc.3",
+    "angular-platform-browser-dynamic": "npm:@angular/platform-browser-dynamic@2.0.0-rc.3",
+    "assert": "github:jspm/nodelibs-assert@0.2.0-alpha",
+    "http": "npm:@angular/http@2.0.0-rc.3",
     "os": "github:jspm/nodelibs-os@0.2.0-alpha",
     "process": "github:jspm/nodelibs-process@0.2.0-alpha",
-    "readline": "github:jspm/nodelibs-readline@0.2.0-alpha",
-    "ts": "github:frankwallis/plugin-typescript@4.0.7",
-    "typescript": "npm:typescript@1.8.10",
-    "es6-promise": "npm:es6-promise@3.1.2",
+    "router": "npm:@angular/router@2.0.0-rc.2",
+    "ts": "github:frankwallis/plugin-typescript@4.0.16",
+    "es6-promise": "npm:es6-promise@3.2.1",
     "es6-shim": "npm:es6-shim@0.33.13",
-    "path": "github:jspm/nodelibs-path@0.2.0-alpha",
-    "plugin-typescript": "github:frankwallis/plugin-typescript@4.0.7",
+    "plugin-typescript": "github:frankwallis/plugin-typescript@4.0.16",
     "reflect-metadata": "npm:reflect-metadata@0.1.2",
     "rxjs": "npm:rxjs@5.0.0-beta.6",
-    "zone.js": "npm:zone.js@0.6.6"
+    "zone.js": "npm:zone.js@0.6.12"
   },
   packages: {
-    "github:frankwallis/plugin-typescript@4.0.7": {
-      "map": {
-        "typescript": "npm:typescript@1.8.10"
-      }
-    },
-    "github:jspm/nodelibs-buffer@0.2.0-alpha": {
-      "map": {
-        "buffer-browserify": "npm:buffer@4.6.0"
-      }
-    },
     "github:jspm/nodelibs-os@0.2.0-alpha": {
       "map": {
         "os-browserify": "npm:os-browserify@0.2.1"
       }
-    },
-    "npm:buffer@4.6.0": {
-      "map": {
-        "base64-js": "npm:base64-js@1.1.2",
-        "ieee754": "npm:ieee754@1.1.6",
-        "isarray": "npm:isarray@1.0.0"
-      }
-    },
-    "npm:es6-promise@3.1.2": {
-      "map": {}
     },
     "npm:es6-shim@0.33.13": {
       "map": {}
@@ -92,8 +93,10 @@ SystemJS.config({
     "npm:reflect-metadata@0.1.2": {
       "map": {}
     },
-    "npm:zone.js@0.6.6": {
-      "map": {}
+    "github:frankwallis/plugin-typescript@4.0.16": {
+      "map": {
+        "typescript": "npm:typescript@1.8.10"
+      }
     }
   }
 });
