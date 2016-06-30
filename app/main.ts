@@ -5,7 +5,6 @@ import { HTTP_PROVIDERS } from '@angular/http';
 import { bootstrap } from '@angular/platform-browser-dynamic';
 import { GenerateErrorComponent } from './generate-error/generate-error.component';
 import { HttpCallComponent } from './http-call/http-call.component';
-import { CharacterService } from './provider/character';
 
 @Component({
     selector: 'app-component',
@@ -20,6 +19,5 @@ export default class App {
 }
 
 bootstrap(App, [
-    HTTP_PROVIDERS,
-    CharacterService
+    HTTP_PROVIDERS
 ]);
